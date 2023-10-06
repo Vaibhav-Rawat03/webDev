@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+
+    @media (min-width:1251px){
+    body {
+      font-family: 'Sono', sans-serif;
+    }
+    .pricing-container{
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      justify-content:center;
+      align-content:center;
+      text-align: center;
+      height:100vh;
+      gap:40px;
+      
+    }
+
+    .pricing-container *{
+      min-width:450px ;
+      min-height: 40px;
+      border-radius: 2%;
+    }
+    
+    .plan-price ,.plan-title{
+      font-weight:900;
+      font-size:50px; 
+    }
+
+    .pricing-plan *{
+       flex:0 1;
+      /* border-top:20px;
+      border-bottom: 20px; */
+      
+    }
+
+    .plan-title{
+      font-size:25px;
+      display:flex;
+      justify-content:center;
+      
+    }
+
+    ul{
+      list-style-type: none;
+      display:inline;
+      align-self: flex-start;
+    }
+    
+    .plan-button{
+      background-color:orange;
+      color:white;
+      min-width: 0;
+      border-radius:10%;
+    }
+
+    .pricing-plan{
+      padding-top:20px;
+      padding-bottom: 20px;
+      background-color: antiquewhite;
+      flex:0 1 100px;
+    }
+  }
+
+    /* Hint: What can you do with a media query and flexbox? */
+    @media (max-width: 1250px) {
+      .pricing-container{
+      display:flex;
+      flex-direction:column;
+      flex-wrap:wrap;
+      justify-content:center;
+      align-content:center;
+      text-align: center;
+      /* height:100vh; */
+      gap:40px;
+     } 
+
+    .plan-price ,.plan-title{
+      font-weight:900;
+      font-size:50px; 
+    }
+
+    .plan-title{
+      font-size:25px;
+      display:flex;
+      justify-content:center;  
+    }
+
+    ul{
+      list-style-type: none;
+      display:inline;
+      align-self: flex-start;
+    }
+    
+    .plan-button{
+      background-color:orange;
+      color:white;
+      min-width: 0;
+      border-radius:10%;
+    }
+
+    .pricing-plan{
+      padding-top:20px;
+      padding-bottom: 20px;
+      background-color: antiquewhite;
+      /* display:block; */
+      width:450px; 
+      /* height: 40px;*/
+    }
+
+    #first{
+     display:block; 
+      width:450px;
+      height:300px;
+    }
+
+    #second{
+     display:block; 
+       width:450px;
+       height:300px;
+    }
+
+    #third{
+     display:block; 
+       width:450px; 
+       height:300px;
+    }
+
+    .pricing-plan *{
+      padding:10px;
+    }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pricing-container">
+    <div class="pricing-plan" id="first">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price">$9.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 10GB Storage</li>
+        <li>✅ 1 User</li>
+        <li>🚫 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan" id="second">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price">$19.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 50GB Storage</li>
+        <li>✅ 5 Users</li>
+        <li>✅ Phone &amp; Email Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan" id="third">
+      <div class="plan-title">Premium</div>
+      <div class="plan-price">$49.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 100GB Storage</li>
+        <li>✅ 10 Users</li>
+        <li>✅ 24/7 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
